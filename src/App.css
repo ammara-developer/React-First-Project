@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  --red:#d01c28;
+  --grey:#808080;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background: #ffffff;
+}
+
+
+.navbar-wrapper {
+  width: 100%;
+  background: #ffffff;
+  padding: 12px 0;
+  position: fixed;     
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  /* box-shadow: 0 2px 5px rgba(0,0,0,0.05); */
+}
+
+/* ✅ Center inner content */
+.navbar {
+  max-width: 1280px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.logo img {
+  height: 40px;
+}
+
+/* ✅ Center menu properly */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.login-btn {
+  all: unset;
+  background:var(--red);
+  color: #fff;
+  border: none;
+  padding: 6px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 500;
+
+}
+
+.hero {
+  width: 100%;
+  padding-top: 140px; /* navbar height space */
+  display: flex;
+  justify-content: center;
+  margin-left: 160px;
+}
+
+.hero-content {
+  max-width: 1280px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 0 20px;
+}
+
+
+.hero-content {
+  max-width: 800px; /* keeps center width */
+  text-align: center; /* center text */
+  
+  padding: 0 20px; 
+  display: flex;
+  flex-direction: column;
+  gap:30px ;
+}
+
+.hero-content h1 {
+ font-size: 108px;      /* change the size as you like */
+  font-weight: 800;
+  line-height: 102px;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 16px;
+  color: var(--grey);
+  margin-bottom: 30px;
+}
+
+.hero-button {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.hero-button button {
+  padding: 12px 25px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background: var(--red);
+  color: white;
+}
+
+.hero-button button:nth-child(2) {
+  background: transparent;
+  color: black;
+  border: 2px solid black;
+}
+
+.hero-brand {
+  text-align: center;
+  
+}
+
+.brand-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 8px;
+}
+
+.brand-icons img {
+  height: 26px;
+}
+
+
+
+
+
+
+
+/* ============================
+   ✅ Tablet Responsive
+============================ */
+@media (max-width: 1024px) {
+  .hero {
+    margin-left: 0; /* remove the manual left margin on small screens */
+    padding-top: 130px;
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .hero-content {
+    max-width: 600px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .hero-content h1 {
+    font-size: 80px;
+    line-height: 78px;
+  }
+
+  .hero-button {
+    justify-content: center;
+  }
+}
+
+/* ============================
+   ✅ Mobile Responsive
+============================ */
+@media (max-width: 768px) {
+  /* Hide nav links by default */
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #fff;
+    width: 100%;
+    flex-direction: column;
+    gap: 25px;
+    padding: 20px 0;
+    display: none; /* will toggle with JS */
+    text-align: center;
+    transition: all 0.35s ease-in-out;
+  opacity: 0;
+  transform: translateY(-15px);
+  pointer-events: none;
+  }
+
+  /* When active show menu */
+  .nav-links.active {
+    display: flex;
+     opacity: 1;
+  transform: translateY(0px);
+  pointer-events: auto;
+  }
+
+  /* Hide login btn */
+  .login-btn {
+    display: none;
+  }
+
+  /* Show hamburger button */
+  .menu-toggle {
+    display: block;
+    font-size: 26px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .hero-content h1 {
+    font-size: 55px;
+    line-height: 60px;
+  }
+
+  .hero {
+    margin-left: 0;
+    padding-top: 120px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image img {
+    width: 350px;
+  }
+
+  .hero-button {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-button button {
+    width: 100%;
+  }
+}
+
+/* ✅ Small phones */
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 42px;
+    line-height: 44px;
+  }
+
+  .hero-image img {
+    width: 260px;
+  }
+
+  .nav-links a {
+    font-size: 16px;
+  }
+}
+
+
