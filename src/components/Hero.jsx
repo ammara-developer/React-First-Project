@@ -13,13 +13,13 @@ return<main className="hero">
         <div className="hero-brand">
             <p>ALSO AVALIABLE NOW</p>
             <div className="brand-icons">
-               <img src="/images/amazon.png" alt="amazon-logo" />
-               <img src="/images/flipkart.png" alt="flipkart-logo" />
+            <img src={`${import.meta.env.BASE_URL}images/amazon.png`} />
+<img src={`${import.meta.env.BASE_URL}images/flipkart.png`} alt="flipkart" />
             </div>
         </div>
     </div>
      <div className="hero-image">
-          <img src="/images/hero-image.png" alt="hero-image" />
+        <img src={`${import.meta.env.BASE_URL}images/hero-image.png`} alt="hero" />
      </div>
 </main>
 

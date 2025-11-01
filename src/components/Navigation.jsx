@@ -5,7 +5,7 @@ const Navigation =() => {
         <div className="navbar-wrapper">
         <nav className="navbar container">
           <div className="logo">
-            <img src="/images/brand_logo.png" alt="Nike Logo" />
+            <img src={`${import.meta.env.BASE_URL}images/brand_logo.png`} alt="logo" />
           </div>
 
           <ul className="nav-links">
