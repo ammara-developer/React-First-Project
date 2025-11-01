@@ -148,6 +148,10 @@ body {
 .brand-icons img {
   height: 26px;
 }
+/* Desktop */
+.menu-toggle {
+  display: none;
+}
 
 
 
